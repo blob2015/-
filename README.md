@@ -1,6 +1,7 @@
 # 论坛签到工具
-●油猴脚本（GreaseMonkey 3.11，FF 52 ESR）             
+●油猴脚本（GreaseMonkey 3.11，FF 52 ESR/32）             
 ●Fork自wycaca【Github】，拟复制Greasy Fork的各种相关脚本               
+●原则：动手为先、错误不免、有心情有时间才搞、不怕拖延       
 
 ---------------
 
