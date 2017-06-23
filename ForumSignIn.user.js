@@ -1,32 +1,22 @@
 // ==UserScript==
 // @name 论坛签到工具
-// @namespace bbssign
-// @version 0.5
+// @namespace ForumSignIn
+// @version 0.1
 // @description 用于各种论坛自动签到
-// @include      http://*/plugin.php?id=dsu_paulsign*
-// @include      http://bbs.kafan.cn/*
-// @include      http://bbs.kafan.cn/forum.php?mod=viewthread*
-// @include      http://www.stus8.com/*
-// @include      http://bbs.kafan.cn/thread-*-*-*.html
-// @include      http://bbs.wstx.com/*
-// @include      http://bbs.houdao.com/
-// @include      http://*/dsu_paulsign-sign*
-// @include      http://www.tsdm.net/*
+// @include      http*://*/plugin.php?id=*sign*
+// @include      http*://bbs.kafan.cn/*
 // @include      http://bbs.gfan.com/*
-// @include      http://www.horou.com/*
-// @include      http://www.92jh.cn/*
-// @include      http://bbs.wstx.com/*
-// @include      http://bbs.ntrqq.net/*
-// @include      http://www.gn00.com/*
-// @include      http://*plugin.php?id=mpage_sign:sign*
+// @include      http*://www.mmyfilm.com/*
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
-// @note         论坛签到工具,整合自卡饭Coolkids论坛自动签到和jasonshaw网页自动化系列点击,做了一点微小的修改
-// @note         感谢@颜太吓的指导
+// @note         论坛签到工具,整合自卡饭Coolkids论坛自动签到和jasonshaw网页自动化系列点击,做了一点微小的修改【wycaca留】
+// @note         感谢@颜太吓的指导【wycaca留】
 // @grant GM_xmlhttpRequest
+// @grant unsafeWindow
 // @run-at document-end
 // @copyright 2013+, Coolkid
 // @copyright 2014+, jasonshaw
 // @copyright 2016+, wycaca
+// @copyright 2017+, someone
 // ==/UserScript==
 
 if(isURL("http://bbs.houdao.com")){
@@ -216,3 +206,13 @@ i++;
 } catch(e){alert(e);}
 }, 400);
 }
+
+
+/*被删掉的一些论坛签到（上面的，以及其他地方copy的）：
+http://bbs.wstx.com	【外设天下】
+http://bbs.houdao.com	【猴岛，游戏】
+http://www.tsdm.net	【天使动漫】
+http://www.92jh.cn	【软件论坛】
+http://bbs.ntrqq.net	【软件】
+http://www.gn00.com	【技术宅】
+*/
