@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name 论坛签到工具
-// @namespace ForumSignIn
-// @version 0.1
-// @description 用于各种论坛自动签到
+// @name 	 论坛签到工具
+// @namespace 	 ForumSignIn
+// @version 	 0.1
+// @description  用于各种论坛自动签到
 // @include      http*://*/plugin.php?id=*sign*
 // @include      http*://bbs.kafan.cn/*
 // @include      http://bbs.gfan.com/*
@@ -10,79 +10,22 @@
 // @require      http://code.jquery.com/jquery-2.1.1.min.js
 // @note         论坛签到工具,整合自卡饭Coolkids论坛自动签到和jasonshaw网页自动化系列点击,做了一点微小的修改【wycaca留】
 // @note         感谢@颜太吓的指导【wycaca留】
-// @grant GM_xmlhttpRequest
-// @grant unsafeWindow
-// @run-at document-end
-// @copyright 2013+, Coolkid
-// @copyright 2014+, jasonshaw
-// @copyright 2016+, wycaca
-// @copyright 2017+, someone
+// @grant 	 GM_xmlhttpRequest
+// @grant 	 unsafeWindow
+// @run-at 	 document-end
+// @copyright 	 2013+, Coolkid
+// @copyright 	 2014+, jasonshaw
+// @copyright 	 2016+, wycaca
+// @copyright 	 2017+, someone
 // ==/UserScript==
 
-if(isURL("http://bbs.houdao.com")){
-	//猴岛
-	var p = {
-		elements: ['#houdaoSignClick']
-	}
-	qd3();
-}
+
 if(isURL("http://bbs.kafan.cn/*")){
 	//卡饭
 	var p = {
 		elements: ['a#pper_a']
 	}
 	qd3();
-}
-
-if(isURL("http://www.emuijd.com/plugin.php?id=dsu_paulsign:sign")){
-	//据点
-	var p = {
-		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1) > img:nth-child(1)']
-	}
-	qd4();
-}
-
-
-if(isURL("http://www.gn00.com/plugin.php?id=dsu_paulsign:sign")){
-	//技术宅
-	var p = {
-		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1) > img:nth-child(1)']
-		}
-	qd4();
-
-}
-
-
-if(isURL("http://cn.club.vmall.com/plugin.php?id=dsu_paulsign:sign")){
-	//华为
-	var p = {
-		elements: ['a.sign-btn.btn_rs']
-	}
-	qd3();
-}
-if(isURL("http://bbs.wstx.com/plugin.php?id=dsu_paulsign:sign")){
-	//外设天下
-	var p = {
-		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1)']
-	}
-	qd4();
-}
-
-if(isURL("http://www.yeapk.com/plugin.php?id=mpage_sign:sign")){
-	//夜安卓
-	GM_xmlhttpRequest({
-		method:'POST',
-		url:'http://www.yeapk.com/plugin.php?id=mpage_sign:sign&inajax=1',
-		data:'formhash=4dc88acc&signsubmit=yes&handlekey=sign&moodid=1&content=123',
-		headers:{
-			//表单编码,表单默认的提交数据的格式
-			"Content-Type": "application/x-www-form-urlencoded"
-		},
-		
-		onload: function(responseDetails) {
-			//alert(responseDetails.responseText);
-		}
-	});
 }
 
 
@@ -216,3 +159,61 @@ http://www.92jh.cn	【软件论坛】
 http://bbs.ntrqq.net	【软件】
 http://www.gn00.com	【技术宅】
 */
+
+/*if(isURL("http://bbs.houdao.com")){
+	//猴岛
+	var p = {
+		elements: ['#houdaoSignClick']
+	}
+	qd3();
+}*/
+
+/*if(isURL("http://www.emuijd.com/plugin.php?id=dsu_paulsign:sign")){
+	//据点
+	var p = {
+		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1) > img:nth-child(1)']
+	}
+	qd4();
+}*/
+
+/*if(isURL("http://www.gn00.com/plugin.php?id=dsu_paulsign:sign")){
+	//技术宅
+	var p = {
+		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1) > img:nth-child(1)']
+		}
+	qd4();
+
+}*/
+
+/*if(isURL("http://cn.club.vmall.com/plugin.php?id=dsu_paulsign:sign")){
+	//华为
+	var p = {
+		elements: ['a.sign-btn.btn_rs']
+	}
+	qd3();
+}*/
+
+/*if(isURL("http://bbs.wstx.com/plugin.php?id=dsu_paulsign:sign")){
+	//外设天下
+	var p = {
+		elements: ['.tr3 > div:nth-child(2) > a:nth-child(1)']
+	}
+	qd4();
+}*/
+
+/*if(isURL("http://www.yeapk.com/plugin.php?id=mpage_sign:sign")){
+	//夜安卓
+	GM_xmlhttpRequest({
+		method:'POST',
+		url:'http://www.yeapk.com/plugin.php?id=mpage_sign:sign&inajax=1',
+		data:'formhash=4dc88acc&signsubmit=yes&handlekey=sign&moodid=1&content=123',
+		headers:{
+			//表单编码,表单默认的提交数据的格式
+			"Content-Type": "application/x-www-form-urlencoded"
+		},
+		
+		onload: function(responseDetails) {
+			//alert(responseDetails.responseText);
+		}
+	});
+}*/
