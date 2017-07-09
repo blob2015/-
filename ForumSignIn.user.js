@@ -36,26 +36,6 @@ if (isURL("www.mmyfilm.com")) { //慢慢游
     }
 }
 
-if(isURL("http://www.tsdm.net/")){
-	//天使论坛
-	qd();
-    if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign")){
-        window.location.href="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign";
-        return;
-    }
-}else if(isURL("bbs.kafan.cn")){
-	//卡饭论坛
-	qd2();
-}else if(isURL("www.lightnovel.cn/home.php?mod=task")){
-	//轻国
-	if(window.find("每日任务")&&window.find("啪啪啪")){
-		window.location.href="http://www.lightnovel.cn/home.php?mod=task&do=apply&id=98";
-		return;
-	}
-}else{
-	//其他论坛
-	qd();
-}
 if(isURL("http://bbs.gfan.com/")){//机锋
     qd();
     if(window.find("签到领奖!")){
@@ -63,23 +43,6 @@ if(isURL("http://bbs.gfan.com/")){//机锋
         return;
     }
 }
-
-
-if(isURL("http://www.horou.com/")){//河洛
-    qd();
-    if(window.find("签到领奖!")){
-        window.location.href="http://www.horou.com/plugin.php?id=dsu_paulsign:sign";
-        return;
-    }
-}
-if(isURL("http://bbs.ntrqq.net/")){//NTRQQ
-    qd();
-    if(window.find("签到领奖!")){
-        window.location.href="http://bbs.ntrqq.net/plugin.php?id=dsu_paulsign:sign";
-        return;
-    }
-}
-
 
 function isURL(x){
     if(window.location.href.indexOf(x)!=-1){
@@ -97,7 +60,7 @@ function qd(){
         	return;
         }
     	text.setAttribute('checked',true);    
-        text2.value = "全自动签到,就是爽~";
+        text2.value = "签到，签到，签到";
 		var button = document.getElementById("qiandao");
 		button.submit();
         return;
@@ -165,6 +128,7 @@ http://www.tsdm.net	【天使动漫】
 http://www.92jh.cn	【软件论坛】
 http://bbs.ntrqq.net	【软件】
 http://www.gn00.com	【技术宅】
+其他
 */
 
 /*if(isURL("http://bbs.houdao.com")){
@@ -223,4 +187,40 @@ http://www.gn00.com	【技术宅】
 			//alert(responseDetails.responseText);
 		}
 	});
+}*/
+
+/*if(isURL("http://www.tsdm.net/")){
+	//天使论坛
+	qd();
+    if(window.find("签到领奖")&&(window.location.href!="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign")){
+        window.location.href="http://www.tsdm.net/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
+}else if(isURL("bbs.kafan.cn")){
+	//卡饭论坛
+	qd2();
+}else if(isURL("www.lightnovel.cn/home.php?mod=task")){
+	//轻国
+	if(window.find("每日任务")&&window.find("啪啪啪")){
+		window.location.href="http://www.lightnovel.cn/home.php?mod=task&do=apply&id=98";
+		return;
+	}
+}else{
+	//其他论坛
+	qd();
+}*/
+
+/*if(isURL("http://www.horou.com/")){//河洛
+    qd();
+    if(window.find("签到领奖!")){
+        window.location.href="http://www.horou.com/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
+}
+if(isURL("http://bbs.ntrqq.net/")){//NTRQQ
+    qd();
+    if(window.find("签到领奖!")){
+        window.location.href="http://bbs.ntrqq.net/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
 }*/
