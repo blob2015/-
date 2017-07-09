@@ -28,6 +28,13 @@ if(isURL("http://bbs.kafan.cn/*")){
 	qd3();
 }
 
+if (isURL("www.mmyfilm.com")) { //慢慢游
+    qd();
+    if (window.find("签到领奖!")) {
+        window.location.href = "http://www.mmyfilm.com/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
+}
 
 if(isURL("http://www.tsdm.net/")){
 	//天使论坛
