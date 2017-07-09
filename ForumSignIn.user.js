@@ -19,13 +19,13 @@
 // @copyright 	 2017+, someone
 // ==/UserScript==
 
-
-if(isURL("http://bbs.kafan.cn/*")){
-	//卡饭
-	var p = {
-		elements: ['a#pper_a']
-	}
-	qd3();
+if (isURL("bbs.kafan.cn")) { //卡饭论坛
+    var imgs = document.getElementById("pper_a").getElementsByTagName("IMG");
+    if (imgs[0].src.indexOf("wb.png") == -1) {
+        var a = document.getElementById("pper_a");
+        a.click();
+        return;
+    }
 }
 
 if (isURL("www.mmyfilm.com")) { //慢慢游
@@ -40,6 +40,22 @@ if(isURL("http://bbs.gfan.com/")){//机锋
     qd();
     if(window.find("签到领奖!")){
         window.location.href="http://bbs.gfan.com/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
+}
+
+if (isURL("www.cnscg.com")) { //圣城家园
+    qd();
+    if (window.find("开始签到")) {
+        window.location.href = "http://www.cnscg.com/plugin.php?id=dsu_paulsign:sign";
+        return;
+    }
+}
+
+if (isURL("www.eshuyuan.net")) { //E书园
+    qd();
+    if (window.find("开始签到")) {
+        window.location.href = "https://www.eshuyuan.net/plugin.php?id=dsu_paulsign:sign";
         return;
     }
 }
